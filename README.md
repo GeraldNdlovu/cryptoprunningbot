@@ -107,9 +107,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 For questions or further assistance, please contact [www.qubitquark.com@gmail.com](mailto:www.qubitquark.com@gmail.com).
 ```
 
-### Key Enhancements:
-
-1. **Color**: Added colors to headers and important sections for better visual appeal.
-2. **HTML in Markdown**: Used HTML `<span>` tags with inline styles for color customization.
-
-Feel free to modify the color codes and styles to fit your preferences! This format combines Markdown with a bit of HTML to make your README both functional and stylish.
