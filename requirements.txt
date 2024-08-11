@@ -1,0 +1,4 @@
+Flask
+binance-client
+pandas
+numpy
