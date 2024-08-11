@@ -1,17 +1,4 @@
 
-
-```
-btc_trading_app/
-│
-├── app.py
-├── requirements.txt
-├── templates/
-│   ├── index.html
-│   └── login.html
-└── static/
-    └── styles.css
-```
-
 ## <span style="color:#FFC107;">Getting Started</span>
 
 ### Prerequisites
