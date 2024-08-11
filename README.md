@@ -1,4 +1,5 @@
-
+BTC Trading Web Application
+BTC Trading Web Application is a user-friendly Flask-based platform designed for executing automated Bitcoin trading strategies. This application integrates with Binance's API to fetch real-time and historical Bitcoin data. Users can interact through a web interface to input trading parameters such as initial capital, pruning ratios, and stop-loss thresholds. The backend processes these inputs, applies a predefined trading strategy, and returns real-time updates on capital and portfolio value. This tool helps users optimize their Bitcoin investments with a simple and intuitive interface.
 ## <span style="color:#FFC107;">Getting Started</span>
 
 ### Prerequisites
