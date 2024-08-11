@@ -1,0 +1,43 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTC Trading Strategy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>BTC Trading Strategy</h1>
+        <form method="POST">
+            <label for="initial_capital">Initial Capital (USDT):</label>
+            <input type="number" id="initial_capital" name="initial_capital" step="0.01" required>
+           
+            <label for="usdt_ratio">USDT Pruning Ratio:</label>
+            <input type="number" id="usdt_ratio" name="usdt_ratio" step="0.01" min="0" max="1" required>
+           
+            <label for="usdc_ratio">USDC Pruning Ratio:</label>
+            <input type="number" id="usdc_ratio" name="usdc_ratio" step="0.01" min="0" max="1" required>
+           
+            <label for="bnb_ratio">BNB Pruning Ratio:</label>
+            <input type="number" id="bnb_ratio" name="bnb_ratio" step="0.01" min="0" max="1" required>
+           
+            <label for="stop_loss">Stop-Loss Threshold (Percentage):</label>
+            <input type="number" id="stop_loss" name="stop_loss" step="0.01" min="0" max="1" required>
+           
+            <button type="submit">Execute Strategy</button>
+        </form>
+       
+        {% if capital is not none %}
+        <div class="results">
+            <h2>Results</h2>
+            <p>Final Capital: {{ capital }} USDT</p>
+            <p>Portfolio Value: {{ portfolio_value }} USDT</p>
+            <p>{{ message }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
+```
