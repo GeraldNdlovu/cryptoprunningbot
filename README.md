@@ -1,16 +1,4 @@
 
-To make your README file visually appealing and "sexy" with varying font sizes and some color, you can enhance it using Markdown features and some HTML for better control over styling. Markdown itself has limited styling options, but you can mix in HTML to achieve a more customized look.
-
-Here’s a stylish version of the README with various enhancements:
-
-```markdown
-# <span style="color:#007BFF;">BTC Trading Web Application</span>
-
-## <span style="color:#28A745;">Overview</span>
-
-This repository contains a **Flask-based web application** for executing a BTC trading strategy. Users can interact with the app through a web interface, while the backend handles the trading logic using Binance's API.
-
-## <span style="color:#17A2B8;">Project Structure</span>
 
 ```
 btc_trading_app/
