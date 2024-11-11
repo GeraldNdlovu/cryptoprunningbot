@@ -1,5 +1,30 @@
-BTC Trading Web Application is a user-friendly platform built with Flask, designed to automate Bitcoin trading strategies with ease. By integrating with Binance's API, the application pulls both real-time and historical Bitcoin market data, enabling users to make data-driven trading decisions.
+# BTC Trading Web Application
 
-The web interface allows users to specify key trading parameters, such as the initial investment amount, pruning ratios, and stop-loss thresholds, which serve as the foundation for automated trading strategies. Once the user inputs these parameters, the backend processes the information, executes the defined trading strategy, and continuously monitors the portfolio's performance.
+The **BTC Trading Web Application** is a user-friendly, Flask-based platform designed to automate Bitcoin trading strategies. It integrates with the Binance API to fetch real-time and historical Bitcoin data, enabling users to execute their trading strategies with ease.
 
-The application provides users with real-time updates on their capital and portfolio value, helping them track their trading performance and make informed adjustments to their strategies. This tool aims to simplify Bitcoin trading, making it accessible to both novice and experienced traders while optimizing their investment strategies with minimal manual effort.
+## Features
+
+- **Automated Trading**: Executes predefined Bitcoin trading strategies based on user-defined parameters.
+- **Real-Time Data**: Fetches live Bitcoin market data and provides real-time updates on trading performance.
+- **Customizable Parameters**: Allows users to input key trading parameters such as:
+  - Initial investment capital
+  - Pruning ratios
+  - Stop-loss thresholds
+- **Portfolio Tracking**: Monitors and displays updates on capital and portfolio value, giving users full transparency over their investments.
+- **User-Friendly Interface**: Simple web interface that makes Bitcoin trading accessible for both beginners and experienced traders.
+
+## How It Works
+
+1. **User Input**: Through the web interface, users specify their trading parameters (e.g., initial capital, pruning ratios, stop-loss levels).
+2. **Backend Processing**: The application processes these inputs and applies the selected trading strategy.
+3. **Real-Time Monitoring**: As the strategy executes, the backend continuously tracks portfolio performance and updates the user on capital and portfolio value in real-time.
+4. **Data Integration**: The app fetches real-time and historical data from the Binance API to inform trading decisions.
+
+## Installation
+
+To get started, clone this repository and install the required dependencies:
+
+```bash
+git clone https://github.com/yourusername/btc-trading-web-app.git
+cd btc-trading-web-app
+pip install -r requirements.txt
