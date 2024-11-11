@@ -26,17 +26,21 @@ def get_historical_data(symbol, interval='1d', lookback='30d'):
     return df['close']
 
 def trading_strategy(initial_capital, pruning_ratio, stop_loss_threshold):
-    """Execute the pruning trading strategy."""
+    """Execute the pruning trading strategy with refined logic and error checks."""
     capital = initial_capital
     initial_investment = capital
     btc_price = get_btc_price()
     historical_prices = get_historical_data('BTCUSDT')
 
-    # Check if pruning is needed
+    # Ensure pruning ratios sum to 1
+    if sum(pruning_ratio) != 1.0:
+        pruning_ratio = tuple(r / sum(pruning_ratio) for r in pruning_ratio)
+
+    # Check if pruning or stop-loss should be executed
     if btc_price > initial_investment:
         profit = btc_price - initial_investment
-        usdt_pruning, usdc_pruning, bnb_pruning = profit * pruning_ratio[0], profit * pruning_ratio[1], profit * pruning_ratio[2]
-        capital += usdt_pruning  # Add USDT pruning to capital
+        usdt_pruning, usdc_pruning, bnb_pruning = [profit * ratio for ratio in pruning_ratio]
+        capital += usdt_pruning
         historical_prices.loc[pd.Timestamp.now()] = btc_price
         portfolio_value = capital + (btc_price - initial_investment)
         return capital, portfolio_value, f"Pruning executed: Added {usdt_pruning} USDT, {usdc_pruning} USDC, {bnb_pruning} BNB"
@@ -45,6 +49,7 @@ def trading_strategy(initial_capital, pruning_ratio, stop_loss_threshold):
         return capital, capital, f"Stop-loss triggered: New capital is {capital}"
 
     return capital, capital, "No action taken"
+
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
