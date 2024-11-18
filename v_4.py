@@ -62,7 +62,7 @@ def trading_strategy(btc_price, initial_investment, capital, pruning_ratio, stop
     return capital, portfolio_value, highest_price, message
 
 def backtest_strategy(initial_capital, pruning_ratio, stop_loss_threshold):
-    """Backtest the trading strategy on historical BTC price data."""
+    """Backtest the trading strategy on historical BTC price data...."""
     historical_prices = get_historical_data('BTCUSDT')
     volatility = calculate_volatility(historical_prices)
     
