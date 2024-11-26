@@ -15,7 +15,7 @@ The BTC Trading Web Application is a Flask-based platform designed to automate B
 - **Backtesting**: Run backtests using historical Bitcoin price data to evaluate trading strategies.
 - **Volatility Filters**: Optionally filters high-volatility periods during backtesting.
 - **Trailing Stop-Loss**: A trailing stop-loss feature that adjusts dynamically based on the highest price observed during the trade.
-- **Spot and Futures Trading**: Supports both spot and futures markets for trading Bitcoin.
+- **Spot and Futures Trading**: Supports both spot and futures markets for trading Bitcoin and other alt coins.
 - **User-Friendly Interface**: A simple web interface that makes Bitcoin trading accessible for both beginners and experienced traders.
 
 ---
